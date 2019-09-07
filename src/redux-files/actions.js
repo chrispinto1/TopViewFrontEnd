@@ -2,7 +2,7 @@ import {FETCH, PRODUCT, CHOSENACCESSORIES, ADDON } from './types'
 
 function fetchProducts(setProducts){
     return function(dispatch){
-      fetch("http://localhost:3000/products")
+      fetch("https://topview-api.herokuapp.com/products")
       .then(resp => resp.json())
       .then(products => {
         dispatch({type: FETCH, payload: products.products})
